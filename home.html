@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo MFS Recap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <main class="flex justify-center">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+                <div class="artboard artboard-demo phone-4">
+
+                    <!-- account section -->
+                    <div class="stats shadow mx-5">
+                        <div class="stat">
+                            <div class="stat-desc text-center font-bold">Account Balance</div>
+                            <div class="flex">
+                                <div class="stat-value mt-3">$</div>
+                                <div id="account_Balance" class="stat-value mt-3">45000</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+                    <!-- button section -->
+                    <div class="space-y-2 mt-3">
+
+                        <div>
+                            <button id="btn_show_addMoney" class="btn">Add Money</button>
+                            <button id="btn_show_cashOut" class="btn">Cashout</button>
+                            <button id="btn_show_transferform" class="btn">Transfer Money</button>
+                        </div>
+                        <div>
+                            <button id="btn_show_bonus" class="btn">Get Bonus</button>
+                            <button id="btn_show_payBill" class="btn">Pay Bill</button>
+                            <button id="btn_transactions" class="btn">Transactions</button>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <!-- add money form start -->
+                    <div id="addMoney_form" class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+
+                            <!-- Bank Account Number -->
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Bank Account Number</span>
+                                </label>
+                                <input id="input_accNum" type="text" placeholder="Enter 6 digit account number"
+                                    class="input input-bordered" required />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Amount to Add</span>
+                                </label>
+                                <input id="input_addMoney" type="text" placeholder="Add Money Amount"
+                                    class="input input-bordered" required />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">4 Digit Pin</span>
+                                </label>
+                                <input id="input_Pin" type="password" placeholder="Enter Your Pin" autocomplete="off"
+                                    class="input input-bordered" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="btn_addMoney" class="btn btn-primary">Add Money</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- add money form end -->
+                    
+                    
+                    <!-- cashout form end -->
+                    <div id="cashout_Form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            
+                            <!-- Bank Agent Number -->
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Agent Number</span>
+                                </label>
+                                <input id="output_accNum" type="text" placeholder="Enter 6 digit account number"
+                                class="input input-bordered" required />
+                            </div>
+                            
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Amount to Cash Out</span>
+                                </label>
+                                <input id="input_cashout" type="text" placeholder="Cash Out Amount"
+                                    class="input input-bordered" required />
+                                </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">4 Digit Pin</span>
+                                </label>
+                                <input id="cashout_pin" type="password" placeholder="Enter Your Pin" autocomplete="off"
+                                class="input input-bordered" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="btn_Cashout" class="btn btn-primary">Withdraw Money</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- cashout form end -->
+                    
+                    <!-- Transfer money form start -->
+                    <div id="transferMoney_form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            
+                            <!-- User Account Number -->
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">User Account Number</span>
+                                </label>
+                                <input id="transfer_accNum" type="text" placeholder="Enter 6 digit account number"
+                                class="input input-bordered" required />
+                            </div>
+                            
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Amount to Transfer</span>
+                                </label>
+                                <input id="transfer_Amount" type="text" placeholder="Amount to Transfer"
+                                class="input input-bordered" required />
+                            </div>
+                            
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">4 Digit Pin</span>
+                                </label>
+                                <input id="transfer_Pin" type="password" placeholder="Enter Your Pin" autocomplete="off"
+                                class="input input-bordered" required />
+                            </div>
+                            
+                            <div class="form-control mt-6">
+                                <button id="btn_transferMoney" class="btn btn-primary">Transfer Money</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Transfer money form end -->
+                    
+                    
+                    <!-- Bonus form start -->
+                    <div id="bonus_form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            
+                            <!-- User Account Number -->
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Enter Bonus coupon</span>
+                                </label>
+                                <input id="bonus_Coupon" type="password" placeholder="Enter Your Coupon"
+                                class="input input-bordered" required />
+                            </div>
+                            
+                            <div class="form-control mt-6">
+                                <button id="bonus_btn" class="btn btn-primary">Get Bonus</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Bonus form end -->
+                    
+                    <!-- Pay Bill form start -->
+                    <div id="payBill_form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+
+                            <!-- Bank Account Number -->
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Biller Account Number</span>
+                                </label>
+                                <input id="biller_AccNum" type="text" placeholder="Enter account number"
+                                    class="input input-bordered" required />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Amount to Pay</span>
+                                </label>
+                                <input id="PayBill_Amount" type="text" placeholder="Add Amount to pay"
+                                    class="input input-bordered" required />
+                            </div>
+
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">4 Digit Pin</span>
+                                </label>
+                                <input id="payBill_Pin" type="password" placeholder="Enter Your Pin" autocomplete="off"
+                                    class="input input-bordered" required />
+                            </div>
+                            
+                            <div class="form-control mt-6">
+                                <button id="btn_payBill" class="btn btn-primary">Pay Bill</button>
+                            </div>
+
+                        </form>
+                    </div>
+                    <!-- Pay Bill form end -->
+
+                    <!-- Transaction start -->
+                    <div class="hidden" id="transactions_section">
+                        <h2 class="font-3xl font-bold text-center">Transactions History</h2>
+
+                        <div id="transaction_container" class=" space-y-3">
+
+                        </div>
+                    </div>
+                    <!-- Transaction end -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/addMoney.js"></script>
+    <script src="./js/cashout.js"></script>
+    <script src="./js/moneyTransfer.js"></script>
+    <script src="./js/bonus_Coupon.js"></script>
+    <script src="./js/pay_Bill.js"></script>
+    <script src="./js/toggle_Features.js"></script>
+
+
+</body>
+
+</html>

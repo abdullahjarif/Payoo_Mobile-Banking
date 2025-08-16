@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo MFS</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        .outfit_font{
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="outfit_font">
+
+    <main class="flex justify-center">
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+                <div class="artboard artboard-demo phone-3">
+
+                    <!-- login section -->
+                    <div class="hero bg-base-200 min-h-screen">
+
+                        <div class="hero-content flex-col">
+                            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+
+                                <!-- logo section -->
+                                <div class="text-center lg:text-center">
+                                    <h1 class="text-4xl font-bold pt-5 font-serif">Login now!</h1>
+                                    <img class="mt-10 mx-auto" src="./images/Group.png" alt="">
+                                </div>
+
+                                <!-- form section -->
+                                <form class="card-body">
+
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">Mobile Number</span>
+                                        </label>
+                                        <input id="phone_num" type="text" placeholder="Enter your number"
+                                            class="input input-bordered" required />
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label class="label">
+                                            <span class="label-text">4 Digit Pin</span>
+                                        </label>
+                                        <input id="pin_Num" type="password" placeholder="Enter 4 Digit Pin"
+                                            class="input input-bordered" autocomplete="off" required />
+                                    </div>
+
+                                    <div class="form-control mt-6">
+                                        <button id="login_Btn" class="btn btn-primary">Login</button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="./js/login.js"></script>
+
+</body>
+
+</html>
