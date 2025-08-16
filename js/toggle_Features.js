@@ -1,0 +1,18 @@
+document.getElementById('btn_show_addMoney').addEventListener("click",function(){
+    showSectionById('addMoney_form');
+});
+document.getElementById('btn_show_cashOut').addEventListener("click",function(){
+    showSectionById('cashout_Form');
+});
+document.getElementById('btn_show_transferform').addEventListener("click",function(){
+    showSectionById('transferMoney_form');
+});
+document.getElementById('btn_show_bonus').addEventListener("click",function(){
+    showSectionById('bonus_form');
+});
+document.getElementById('btn_show_payBill').addEventListener("click",function(){
+    showSectionById('payBill_form');
+});
+document.getElementById('btn_transactions').addEventListener("click",function(){
+    showSectionById('transactions_section');
+});
